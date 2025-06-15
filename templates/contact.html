@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Contact Us </title>
+<style>
+.card-container {
+  display: flex;
+  justify-content: center; /* centers the row horizontally */
+  gap: 20px; /* space between cards */
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  padding: 20px;
+}  
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #181825;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  height: auto;
+  width: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration:solid;
+  color: #ffffff;
+  padding: 50px 54px;
+  transition: smooth background-color 3ms ease-in ;
+  
+}
+
+.signin {
+  text-decoration:solid;
+  height: auto;
+  width: auto;
+  color: #ffffff;
+  padding: 20px 24px;
+  transform: translateX(-50px);
+}
+
+.nav-links li a:hover {
+  background-color: #07c4f4;
+  border-radius: 10px;
+}
+.signin:hover {
+  background-color: #07c4f4;
+  color: black;
+  border-radius: 10px;
+  
+  
+}
+.heading {
+  background: linear-gradient(to right, #4da3ff, #00f5c6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  align-items: center; 
+  display: grid;    
+  width: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+  }
+
+  .card img {
+    width: 100%;
+    height: 300px;
+    object-fit:cover;
+    align-items: center; 
+    display: grid;
+    transform: translateY(19px);
+  }
+
+  .card-content {
+    align-items: center; 
+    display:grid;
+    background-color: wheat; 
+    transform: translateY(10px);
+}
+.link{
+  color: white;
+}
+.body{
+    height: 40px;
+    border-radius: 10px;
+    font-size: large;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.box{
+    height: 100%;
+    width: 500px;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 600px;
+    max-height: 200px;
+    line-height: 1.2;
+    font-size: large;
+}
+.button{
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border-width: 5;
+    border-color:#07c4f4;
+}
+
+</style>
+</head>
+<body bgcolor="#1e1e2f">
+    <nav class="navbar">
+  <div class="logo"><h1>VIT Student Clubs Hub</h1></div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="#">Clubs</a></li>
+    <li><a href="#">Events</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  <div class="signin"><a href="/login"><div class = "link">Sign In</div></a></div>
+</nav>
+<br><br>
+<div align="center">    <h1><font color="#07c4f4">Contact Us</font></h1> </div>
+<form action="/contact" method="POST">
+<div align="center">
+<input class="body" type="text" name="name" placeholder="Your Name" size="50px" required><br><br><br>
+<input class="body" type="email" name="email" placeholder="Your Email" size="50px" required><br><br><br>
+<textarea class="box" name="message" placeholder="Your Message" required></textarea><br><br>
+<button class="button" type="submit">Submit</button>
+</div>
+</form>
+</body>
