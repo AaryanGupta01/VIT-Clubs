@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,redirect,url_for,flash,render_template_string
+from flask import Flask,render_template,request,redirect,url_for,flash,render_template_string,session
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -48,20 +48,36 @@ def login_page():
     if(request.method=='POST'):
         email = request.form.get('email')
         password = request.form.get('password')
-        user = Login(email = email,password=password)
-        db.session.add(user)
-        db.session.commit()
+        
+        user = Users.query.filter_by(email = email,password=password).first()
+
         if user:
+            db.session.add(user)
+            db.session.commit()
+            
+            session['user'] = user.email.split('@')[0]
+            
             return render_template_string("""
             <script>
                 alert("Log In Successful!!");
                 window.location.href = "{{ url_for('home') }}";
             </script>
         """)
+            
         else:
-            return "Invalid credentials"
+            return render_template_string("""
+            <script>
+                alert("Invalid Credentials!!");
+                window.location.href = "{{ url_for('home') }}";
+            </script>
+        """)
         
     return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('user',None)
+    return redirect(url_for('home'))
 
 @app.route("/register",methods = ['GET','POST'])
 def register():
@@ -73,7 +89,12 @@ def register():
         
         existing_user = Login.query.filter_by(email=email).first()
         if existing_user:
-            return "User already exists. Please log in."
+            return render_template_string("""
+            <script>
+                alert("User already exists. Please Sign In.");
+                window.location.href = "{{ url_for('login_page') }}";
+            </script>
+        """)
 
         new_user = Users(name=name,regno=regno,email=email, password=password)
 

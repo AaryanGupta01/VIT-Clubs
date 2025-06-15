@@ -97,7 +97,15 @@
 .link{
   color: white;
 }
-
+.logout:hover{
+  height: auto;
+  width: auto;
+  display: flex;
+  color: white;
+  background-color: red;
+  border-radius: 30px;
+  padding: 20px;
+}
 
 </style>
 
@@ -112,7 +120,13 @@
     <li><a href="#">Events</a></li>
     <li><a href="/contact">Contact Us</a></li>
   </ul>
-  <div class="signin"><a href="/login"><div class = "link">Sign In</div></a></div>
+  {% if session.get('user') %}
+    <p class="link">Welcome, {{session.get('user')}}</p>
+    <div class="logout"><a href="/logout"><font color="white">Log Out</font></a></div>
+  {% else %}
+    <div class="signin"><a href="/login"><div class = "link">Sign In</div></a></div>
+  {% endif %}
+  
 </nav>
 
 
