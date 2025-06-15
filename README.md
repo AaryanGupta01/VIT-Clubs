@@ -6,7 +6,7 @@ A web application to showcase and manage clubs at **VIT Vellore**, built using *
 
 ## 📌 Features
 
-- 🔐 **Login/Register** functionality with secure form handling
+- 🔐 **Login/Register/Log Out** functionality with secure form handling
 - 📬 **Contact Us** form saving messages to MySQL database
 - 📁 Displays information about various clubs.
 - 🎨 Responsive and modern design using custom CSS
