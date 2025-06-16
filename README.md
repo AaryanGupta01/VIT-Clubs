@@ -28,7 +28,8 @@ A web application to showcase and manage clubs at **VIT Vellore**, built using *
 ---
 
 ✍️ Author
-Aaryan Gupta
+
+Aaryan Gupta <br>
 📧 aaryang0108@gmail.com
 🌐 GitHub: @AaryanGupta01
 
