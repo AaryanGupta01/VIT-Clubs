@@ -27,16 +27,12 @@ A web application to showcase and manage clubs at **VIT Vellore**, built using *
 
 ---
 
-✍️ Author
-Aaryan Gupta
-📧 aaryang0108@gmail.com
-🌐 GitHub: @AaryanGupta01
+✍️ Author <br>
+Aaryan Gupta <br>
+📧 aaryang0108@gmail.com <br>
+🌐 GitHub: @AaryanGupta01 <br>
 
-## 🚀 How to Run Locally
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/AaryanGupta01/VIT-Clubs.git
-cd VIT-Clubs
+A quick look at the design of the web app but the free web hosting site I am using is not able to show the login feature.<br> 
+https://vit-clubs.onrender.com/
 
 
