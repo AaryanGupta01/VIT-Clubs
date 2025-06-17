@@ -50,8 +50,10 @@ def login_page():
         password = request.form.get('password')
         
         user = Users.query.filter_by(email = email,password=password).first()
-
+        
         if user:
+            # For checking the login activity 
+            user = Login(email = email,password=password) 
             db.session.add(user)
             db.session.commit()
             
