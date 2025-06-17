@@ -2,6 +2,9 @@
 
 A web application to showcase and manage clubs at **VIT Vellore**, built using **Flask**, **MySQL**, and **HTML/CSS**.
 
+![image](https://github.com/user-attachments/assets/95f8a25f-0835-4c33-a72f-51817291f3a4)
+
+
 ---
 
 ## 📌 Features
